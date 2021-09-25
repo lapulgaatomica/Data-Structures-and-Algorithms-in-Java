@@ -3,7 +3,7 @@ package stacks;
 import fundamentaldatastructures.SinglyLinkedList;
 
 public class LinkedStack<E> implements Stack<E> {
-    private SinglyLinkedList<E> list = new SinglyLinkedList<>();
+    private final SinglyLinkedList<E> list = new SinglyLinkedList<>();
     public LinkedStack(){}
 
     public int size() {

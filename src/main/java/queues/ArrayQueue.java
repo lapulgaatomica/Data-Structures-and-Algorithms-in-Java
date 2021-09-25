@@ -3,16 +3,16 @@ package queues;
 public class ArrayQueue<E> implements Queue<E> {
 
     private static final int CAPACITY = 1000 ;
-    private E[] data;
-    private int f = 0;
-    private int sz = 0;
+    private final E[] data;// generic array used for storage
+    private int f = 0;// index of the front element
+    private int sz = 0;// current number of elements
 
     public ArrayQueue(){
-        this(CAPACITY);
+        this(CAPACITY);// constructs queue with default capacity
     }
 
-    public ArrayQueue(int capacity){
-        data = (E[]) new Object[capacity];
+    public ArrayQueue(int capacity){// constructs queue with given capacity
+        data = (E[]) new Object[capacity];// safe cast; compiler may give warning
     }
 
     public int size() {

@@ -112,8 +112,8 @@ public class LinkedPositionalList<E> implements PositionalList<E> {
         return new ElementIterator();
     }
 
-    private Node<E> header;
-    private Node<E> trailer;
+    private final Node<E> header;
+    private final Node<E> trailer;
     private int size = 0;
 
     public LinkedPositionalList(){

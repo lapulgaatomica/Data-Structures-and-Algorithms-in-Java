@@ -3,7 +3,7 @@ package fundamentaldatastructures;
 public class TicTacToe {
     public static final int X = 1, O = -1;
     public static final int EMPTY = 0;
-    private int[][] board = new int[3][3];
+    private final int[][] board = new int[3][3];
     private int player;
 
     public TicTacToe(){

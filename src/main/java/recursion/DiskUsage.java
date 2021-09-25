@@ -6,8 +6,8 @@ public class DiskUsage {
     public static long diskUsage(File root){
         long total = root.length();
         if(root.isDirectory()){
-            for(String childname: root.list()){
-                File child = new File(root, childname);
+            for(String childName: root.list()){
+                File child = new File(root, childName);
                 total += diskUsage(child);
             }
         }

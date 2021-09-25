@@ -2,7 +2,7 @@ package fundamentaldatastructures;
 
 public class CircularlyLinkedList<E> {
     private static class Node<E>{
-        private E element;
+        private final E element;
         private Node<E> next;
 
         public Node(E e, Node<E> n){
@@ -25,9 +25,7 @@ public class CircularlyLinkedList<E> {
 
     private Node<E> tail = null;
     private int size = 0;
-    public CircularlyLinkedList(){
-
-    }
+    public CircularlyLinkedList(){ }
 
     public int size(){
         return size;

@@ -1,8 +1,8 @@
 package fundamentaldatastructures;
 
 public class GameEntry {
-    private String name;
-    private int score;
+    private final String name;
+    private final int score;
 
     public GameEntry(String n, int s){
         name = n;

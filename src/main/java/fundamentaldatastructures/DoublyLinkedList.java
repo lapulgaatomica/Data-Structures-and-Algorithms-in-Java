@@ -2,7 +2,7 @@ package fundamentaldatastructures;
 
 public class DoublyLinkedList<E> {
     private static class Node<E>{
-        private E element;
+        private final E element;
         private Node<E> prev;
         private Node<E> next;
 
@@ -33,14 +33,14 @@ public class DoublyLinkedList<E> {
         }
     }
 
-    private Node<E> header;
-    private Node<E> trailer;
+    private final Node<E> header;// header sentinel
+    private final Node<E> trailer;// trailer sentinel
     private int size = 0;
 
     public DoublyLinkedList(){
-        header = new Node<>(null, null, null);
-        trailer = new Node<>(null, header, null);
-        header.setNext(trailer);
+        header = new Node<>(null, null, null);// create header
+        trailer = new Node<>(null, header, null);// trailer is preceded by header
+        header.setNext(trailer);// header is followed by trailer
     }
 
     public int size(){
@@ -55,14 +55,14 @@ public class DoublyLinkedList<E> {
         if(isEmpty()){
             return null;
         }
-        return header.getNext().getElement();
+        return header.getNext().getElement();// first element is beyond header
     }
 
     public E last(){
         if(isEmpty()){
             return null;
         }
-        return trailer.getPrev().getElement();
+        return trailer.getPrev().getElement();// last element is before trailer
     }
 
     public void addFirst(E e){
