@@ -103,7 +103,7 @@ public abstract class AbstractTree<E> implements Tree<E> {
         return snapshot;
     }
 
-    public Iterable<Position<E>> breadthfirst(){
+    public Iterable<Position<E>> breadthFirst(){
         List<Position<E>> snapshot = new ArrayList<>();
         if(!isEmpty()){
             Queue<Position<E>> fringe = new LinkedQueue<>();
