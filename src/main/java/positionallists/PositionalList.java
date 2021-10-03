@@ -26,4 +26,5 @@ public interface PositionalList<E> {
     E set(Position<E> p, E e) throws IllegalArgumentException;
     /** Removes the element stored at Position p and returns it (invalidating p). ∗ */
     E remove(Position<E> p) throws IllegalArgumentException;
+    Iterable<Position<E>> positions();
 }
