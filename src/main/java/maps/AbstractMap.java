@@ -40,7 +40,7 @@ public abstract class AbstractMap<K, V> implements Map<K, V>{
 
     // Support for public keySet method...
     private class KeyIterator implements Iterator<K>{
-        private Iterator<Entry<K,V>> entries = entrySet().iterator();
+        private final Iterator<Entry<K,V>> entries = entrySet().iterator();
 
         @Override
         public boolean hasNext() {
@@ -68,7 +68,7 @@ public abstract class AbstractMap<K, V> implements Map<K, V>{
     }
 
     private class ValueIterator implements Iterator<V>{
-        private Iterator<Entry<K,V>> entries = entrySet().iterator();
+        private final Iterator<Entry<K,V>> entries = entrySet().iterator();
 
         @Override
         public boolean hasNext() {
