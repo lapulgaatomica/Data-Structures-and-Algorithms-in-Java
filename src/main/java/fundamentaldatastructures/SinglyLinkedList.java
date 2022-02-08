@@ -1,7 +1,5 @@
 package fundamentaldatastructures;
 
-import java.util.LinkedList;
-import java.util.List;
 /*A linked list is a collection of nodes that collectively form
 a linear sequence. In a singly linked list,
 each node stores a reference to an object that is an
@@ -139,5 +137,30 @@ public class SinglyLinkedList<E> implements Cloneable {
             }
         }
         return other;
+    }
+
+    @Override
+    public String toString(){
+        StringBuilder stringBuilder = new StringBuilder();
+        Node<E> walk = head;
+        while(walk != null){
+            stringBuilder.append(walk.getElement().toString());
+            walk = walk.getNext();
+            if(walk != null){
+               stringBuilder.append(" => ");
+            }
+        }
+        return stringBuilder.toString();
+    }
+}
+
+class TestSinglyLinkedList{
+    public static void main(String[] args) {
+        SinglyLinkedList<Integer> singlyLinkedList = new SinglyLinkedList<>();
+        singlyLinkedList.addLast(1);
+        singlyLinkedList.addLast(2);
+        singlyLinkedList.addLast(3);
+        singlyLinkedList.addLast(4);
+        System.out.println(singlyLinkedList);
     }
 }
