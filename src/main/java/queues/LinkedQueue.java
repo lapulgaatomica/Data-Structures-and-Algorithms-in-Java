@@ -4,7 +4,7 @@ import fundamentaldatastructures.SinglyLinkedList;
 
 public class LinkedQueue<E> implements Queue<E> {
 
-    private SinglyLinkedList<E> list = new SinglyLinkedList<>();
+    private final SinglyLinkedList<E> list = new SinglyLinkedList<>();
 
     public LinkedQueue(){}
 

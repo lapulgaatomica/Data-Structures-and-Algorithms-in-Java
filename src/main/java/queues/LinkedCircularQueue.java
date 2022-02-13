@@ -4,7 +4,7 @@ import fundamentaldatastructures.CircularlyLinkedList;
 
 public class LinkedCircularQueue<E> implements CircularQueue<E> {
 
-    private CircularlyLinkedList<E> list = new CircularlyLinkedList<>();
+    private final CircularlyLinkedList<E> list = new CircularlyLinkedList<>();
 
     public LinkedCircularQueue(){}
 

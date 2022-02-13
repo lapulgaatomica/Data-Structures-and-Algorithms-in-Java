@@ -1,7 +1,6 @@
 package recursion;
 
 public class EnglishRuler {
-
     public static void main(String[] args) {
         drawRuler(2, 4);
     }

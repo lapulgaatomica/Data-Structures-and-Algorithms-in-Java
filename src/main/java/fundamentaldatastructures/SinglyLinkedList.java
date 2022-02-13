@@ -144,7 +144,7 @@ public class SinglyLinkedList<E> implements Cloneable {
         StringBuilder stringBuilder = new StringBuilder();
         Node<E> walk = head;
         while(walk != null){
-            stringBuilder.append(walk.getElement().toString());
+            stringBuilder.append(walk.getElement());
             walk = walk.getNext();
             if(walk != null){
                stringBuilder.append(" => ");
@@ -161,6 +161,9 @@ class TestSinglyLinkedList{
         singlyLinkedList.addLast(2);
         singlyLinkedList.addLast(3);
         singlyLinkedList.addLast(4);
+        System.out.println(singlyLinkedList);
+        singlyLinkedList.removeFirst();
+        singlyLinkedList.removeFirst();
         System.out.println(singlyLinkedList);
     }
 }
