@@ -14,6 +14,21 @@ public class HeapPriorityQueue<K, V> extends AbstractPriorityQueue<K, V>{
         super(comp);
     }
 
+    public HeapPriorityQueue(K[] keys, V[] values){
+        super();
+        for(int j = 0; j < Math.min(keys.length, values.length); j++){
+            heap.add(new PQEntry<>(keys[j], values[j]));
+        }
+        heapify();
+    }
+
+    protected void heapify(){
+        int startIndex = parent(size() - 1);
+        for(int j = startIndex; j >= 0; j--){
+            downheap(j);
+        }
+    }
+
     protected int parent(int j){
         return (j - 1) / 2;
     }
@@ -40,7 +55,7 @@ public class HeapPriorityQueue<K, V> extends AbstractPriorityQueue<K, V>{
         heap.set(j, temp);
     }
 
-    protected void uphead(int j){
+    protected void upheap(int j){
         while(j > 0){
             int p = parent(j);
             if(compare(heap.get(j), heap.get(p)) >= 0){
@@ -87,7 +102,7 @@ public class HeapPriorityQueue<K, V> extends AbstractPriorityQueue<K, V>{
         checkKey(key);
         Entry<K, V> newest = new PQEntry<>(key, value);
         heap.add(newest);
-        uphead(heap.size() - 1);
+        upheap(heap.size() - 1);
         return newest;
     }
 
