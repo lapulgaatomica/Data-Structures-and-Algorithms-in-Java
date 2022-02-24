@@ -1,7 +1,5 @@
 package maps;
 
-import priorityqueues.Entry;
-
 import java.util.Iterator;
 
 public abstract class AbstractMap<K, V> implements Map<K, V>{

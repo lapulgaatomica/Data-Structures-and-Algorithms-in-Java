@@ -1,7 +1,5 @@
 package maps;
 
-import priorityqueues.Entry;
-
 public interface Map<K,V> {
     int size();
     boolean isEmpty();

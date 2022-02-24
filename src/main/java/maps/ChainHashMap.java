@@ -1,7 +1,5 @@
 package maps;
 
-import priorityqueues.Entry;
-
 import java.util.ArrayList;
 
 public class ChainHashMap<K,V> extends AbstractHashMap<K,V> {

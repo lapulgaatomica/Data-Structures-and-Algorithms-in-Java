@@ -1,7 +1,5 @@
 package maps;
 
-import priorityqueues.Entry;
-
 import java.util.ArrayList;
 import java.util.Iterator;
 
